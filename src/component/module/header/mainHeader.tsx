@@ -1,90 +1,110 @@
-import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import React, { useState } from 'react';
 
-function Mainheader() {
+// --- Inline SVG Icons ---
+// Menu Icon
+const MenuIcon = (props) => (
+    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+);
+
+// Close Icon
+const XIcon = (props) => (
+    <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+);
+
+// --- Header Component ---
+export function Mainheader() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const navItems = [
+        { href: "#about", label: "About" },
+        { href: "#experience", label: "Experience" },
+        { href: "#skills", label: "Skills" },
+        { href: "#projects", label: "Projects" },
+        { href: "#contact", label: "Contact" },
+    ];
+
+    const handleNavLinkClick = () => setMenuOpen(false);
+
     return (
-        <header className="bg-[#0D1224] w-full">
-            {/* ব্যাকগ্রাউন্ড ওভারলে (শুধু মোবাইলে) */}
+        <header className="bg-[#0D1224] w-full fixed top-0 left-0 z-50 shadow-lg border-b border-[#1E293B]">
+            {/* Overlay */}
             {menuOpen && (
                 <div
                     onClick={() => setMenuOpen(false)}
-                    className="fixed inset-0 bg-black bg-opacity-50 z-10 md:hidden"
+                    className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 md:hidden"
                 ></div>
             )}
 
-            <div className="max-w-full shadow-lg fixed w-full bg-[#0D1224] mx-auto px-4 sm:px-6 lg:px-8 z-20">
-                <div className="flex items-center justify-between h-16">
-
-                    {/* লোগো */}
-                    <a
-                        href="#home"
-                        className="flex items-center gap-3 focus:outline-none rounded-lg p-1 -m-1"
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between relative z-50">
+                {/* Logo */}
+                <a
+                    href="#home"
+                    className="flex items-center gap-3 p-1 -m-1 transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg"
+                >
+                    <div
+                        className="w-10 h-10 rounded-full flex items-center justify-center text-white font-extrabold text-lg shadow-md"
+                        style={{
+                            background: "linear-gradient(270deg, #F472B6, #A78BFA, #60A5FA, #22D3EE)",
+                        }}
                     >
-                        <div
-                            className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg animate-gradient-logo"
-                            style={{
-                                background:
-                                    "linear-gradient(270deg, #F472B6, #A78BFA, #60A5FA, #22D3EE)",
-                                backgroundSize: "400% 400%",
-                            }}
-                        >
-                            JM
-                        </div>
-                        <div className="hidden sm:block">
-                            <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-400 text-transparent bg-clip-text animate-gradient-text">
-                                Jihad Mia
-                            </span>
-                            <p className="text-sm font-medium bg-gradient-to-r from-teal-400 via-indigo-400 to-pink-500 text-transparent bg-clip-text animate-gradient-text">
-                                Frontend Developer
-                            </p>
-                        </div>
-                    </a>
-
-                    {/* মোবাইলের জন্য হ্যামবার্গার বাটন */}
-                    <div className="md:hidden">
-                        <button
-                            onClick={() => setMenuOpen(!menuOpen)}
-                            className="text-white text-2xl"
-                            aria-label="Toggle menu"
-                            aria-expanded={menuOpen}
-                        >
-                            {menuOpen ? <FiX /> : <FiMenu />}
-                        </button>
+                        JM
                     </div>
+                    <div className="hidden sm:block">
+                        <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 text-transparent bg-clip-text">
+                            Jihad Mia
+                        </span>
+                        <p className="text-sm font-medium bg-gradient-to-r from-teal-400 via-indigo-400 to-pink-500 text-transparent bg-clip-text">
+                            Frontend Developer
+                        </p>
+                    </div>
+                </a>
 
-                    {/* নেভিগেশন মেনু */}
-                    <nav
-                        className={`absolute top-16 left-0 w-full bg-[#0D1224] md:static md:flex md:w-auto transition-all duration-300 ease-in-out ${menuOpen
-                                ? "opacity-100 translate-y-0"
-                                : "opacity-0 -translate-y-5 pointer-events-none md:opacity-100 md:translate-y-0"
-                            }`}
-                    >
-                        <ul className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 p-4 md:p-0">
-                            {[
-                                { href: "#about", label: "About" },
-                                { href: "#experience", label: "Experience" },
-                                { href: "#skills", label: "Skills" },
-                                { href: "#projects", label: "Projects" },
-                                { href: "#contact", label: "Contact" },
-                            ].map((item) => (
-                                <li key={item.label}>
-                                    <a
-                                        href={item.href}
-                                        onClick={() => setMenuOpen(false)} // ক্লিক করলে মেনু বন্ধ
-                                        className="text-white uppercase font-bold text-[15px] hover:text-[#DB2777] transition"
-                                    >
-                                        {item.label}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                </div>
+                {/* Mobile Toggle */}
+                <button
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className="text-white w-8 h-8 md:hidden p-1 rounded-full hover:bg-[#1E293B] transition focus:outline-none focus:ring-2 focus:ring-pink-500"
+                    aria-label="Toggle menu"
+                >
+                    {menuOpen ? <XIcon className="w-full h-full" /> : <MenuIcon className="w-full h-full" />}
+                </button>
+
+                {/* Nav Menu */}
+                <nav
+                    className={`absolute md:static top-16 right-0 w-64 md:w-auto bg-[#0D1224] md:bg-transparent transition-all duration-300 ease-in-out shadow-xl md:shadow-none p-4 md:p-0 rounded-b-lg ${menuOpen
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 translate-x-full md:opacity-100 md:translate-x-0 pointer-events-none md:pointer-events-auto"
+                        } md:transform-none z-50`}
+                >
+                    <ul className="flex cursor-pointer flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
+                        {navItems.map((item) => (
+                            <li key={item.label}>
+                                <a
+                                    href={item.href}
+                                    onClick={handleNavLinkClick}
+                                    className="block py-2 px-3 md:p-0 text-white uppercase font-medium text-sm tracking-wider relative group transition-colors duration-300 hover:text-pink-500"
+                                >
+                                    {item.label}
+                                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                                </a>
+                            </li>
+                        ))}
+
+                        <li>
+                            <a
+                                href="#contact"
+                                onClick={handleNavLinkClick}
+                                className="inline-block px-5 py-2 mt-4 md:mt-0 text-white font-bold text-sm rounded-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 transition-all duration-300 shadow-xl hover:shadow-pink-500/50 transform hover:scale-105"
+                            >
+                                RESUME
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
     );
 }
-
-export default Mainheader;

@@ -79,13 +79,16 @@ export default function HeroText() {
                 <button className="flex gap-1.5 w-[130px] sm:w-fit items-center cursor-pointer uppercase px-6 py-3 border border-[#E8489C] border-gradient-r from-green-500 to-red-600 rounded-lg text-white font-semibold 
                      hover:border-[#E8489C]
                      transition-all duration-300 transform hover:scale-x-105 hover-gap-3 origin-left">
-                    Contact me <BsFillPersonLinesFill />
+                    <a href="">
+                        Contact me
+                    </a>
+                    <BsFillPersonLinesFill />
                 </button>
 
                 <button className="flex gap-1.5 w-[130px] sm:w-fit items-center cursor-pointer uppercase px-6 py-3  rounded-lg text-white font-semibold bg-gradient-to-r from-[#863BE6] to-[#E8489C]
                      hover:from-[#E8489C] hover:to-[#863BE6] hover-gap-3 
                      transition-all duration-300 transform hover:scale-x-105 origin-left">
-                    Get Resume <IoMdDownload />
+                    RESUME <IoMdDownload />
                 </button>
             </div>
         </section>
