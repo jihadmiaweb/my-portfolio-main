@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    font-family: "Playfair Display", serif;
+
+}
+
+
+
+
+
+.glow-border {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.75rem;
+    animation: border-glow 3s infinite alternate;
+}
+
+
+
+@keyframes border-glow {
+    0% {
+        border-color: #0ff;
+        box-shadow: 0 0 5px #0ff, 0 0 15px #0ff;
+    }
+
+    50% {
+        border-color: #ff00ff;
+        box-shadow: 0 0 10px #ff00ff, 0 0 25px #ff00ff;
+    }
+
+    100% {
+        border-color: #0ff;
+        box-shadow: 0 0 5px #0ff, 0 0 15px #0ff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.animated-line {
+    animation: colorGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes colorGlow {
+    0% {
+        background-color: #ffffff;
+    }
+
+    50% {
+        background-color: #0ff;
+    }
+
+    100% {
+        background-color: #ff00ff;
+    }
+
+}
+
+
+
+
+/* border animation start */
+
+.borderAnimation {
+    animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+    0% {
+        border-color: #ffffff;
+    }
+
+    50% {
+        border-color: #0ff;
+    }
+
+    100% {
+        border-color: #ff00ff;
+    }
+}
+
+
+/* slider start */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slider {
+    display: flex;
+    width: max-content;
+    gap: 10px;
+    overflow-x: hidden;
+
+    animation: scroll 20s linear infinite;
+
+
+}
+
+
+/* bounce */
+
+
+@layer utilities {
+    @keyframes bob {
+
+        0%,
+        100% {
+            transform: translateY(-5px);
+        }
+
+        /* top -5px */
+        50% {
+            transform: translateY(5px);
+        }
+
+        /* bottom +5px */
+    }
+
+    .bounce {
+        animation: bob 1s ease-in-out infinite;
+        /* optional: preserve-transform if you want smoother GPU rendering */
+        will-change: transform;
+    }
+}
