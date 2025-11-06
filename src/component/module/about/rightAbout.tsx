@@ -6,8 +6,8 @@ function RightAbout() {
                     ABOUT ME <span className="absolute hidden md:block top-[104px] right-[17px] bg-white w-[1px] h-15 animated-line"></span>
                 </button>
             </div>
-            <div className="w-[80%]">
-                <img src="/images/jihad.png" alt="photo" className="w-[70%] rounded-2xl hover:scale-102 hover:rotate-15 md:hover:scale-105 md:hover:rotate-30 transition duration-300 ease " />
+            <div className="w-[400px] ">
+                <img src="/images/jihad.png" alt="photo" className="w-[100%] rounded-2xl hover:scale-102 hover:rotate-15 md:hover:scale-105 md:hover:rotate-30 transition duration-300 ease " />
             </div>
         </div>
     </>
