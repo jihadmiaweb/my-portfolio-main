@@ -5,10 +5,10 @@ const HeroAccentColor = "#FF4D6D";
 const HeroMidColor = "#4A90E2";
 
 const ServiceData = [
-  { id: 1, image: "/images/services/s1.png", name: "Wp Developing", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
-  { id: 2, image: "/images/services/s2.png", name: "UI/UX Design", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
-  { id: 3, image: "/images/services/s3.png", name: "Web Design", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
-  { id: 4, image: "/images/services/s4.png", name: "SEO Optimize", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  { id: 1, image: "/images/services/s1.png", name: "Backend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  { id: 2, image: "/images/services/s2.png", name: "Frontend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  { id: 3, image: "/images/services/s3.png", name: "Backend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  { id: 4, image: "/images/services/s4.png", name: "API Integration", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
 ];
 
 // TypeScript safe Variants
