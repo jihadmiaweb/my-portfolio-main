@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
 
-// --- Inline SVG Icons ---
-// Menu Icon
-const MenuIcon = (props) => (
+// --- SVG Props Type ---
+// React.SVGProps<SVGSVGElement> দিয়ে সব SVG props type safe হয়
+const MenuIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
 );
 
-// Close Icon
-const XIcon = (props) => (
+const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <svg {...props} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
     </svg>
 );
 
-// --- Header Component ---
-export function Mainheader() {
-    const [menuOpen, setMenuOpen] = useState(false);
+// --- Navigation Item Type ---
+type NavItem = {
+    href: string;
+    label: string;
+};
 
-    const navItems = [
+// --- Header Component ---
+export const Mainheader: React.FC = () => {
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+    const navItems: NavItem[] = [
         { href: "#about", label: "About" },
         { href: "#experience", label: "Experience" },
         { href: "#skills", label: "Skills" },
@@ -107,4 +112,4 @@ export function Mainheader() {
             </div>
         </header>
     );
-}
+};
