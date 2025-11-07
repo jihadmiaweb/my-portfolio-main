@@ -60,7 +60,7 @@ const Service = () => {
         {/* Service Cards */}
         <motion.div
           variants={containerVariants}
-          initial="hidden"
+          initial=""
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
@@ -69,7 +69,7 @@ const Service = () => {
             <motion.div
               key={service.id}
               variants={itemVariants}
-              initial="hidden"
+              initial=""
               whileHover="hovered"
               className="group relative p-8 rounded-xl border border-gray-800 bg-[#0D1224] text-center overflow-hidden"
             >
