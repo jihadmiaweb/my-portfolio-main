@@ -33,11 +33,12 @@ function RightContact() {
                     <BiSolidPhoneCall className={smallIconClasses} />
                     <a
                         href="tel:+88010940386783"
-                        className=" hover:underline"
+                        className="font-semibold text-lg font-sans"
                     >
                         +88010940386783
                     </a>
                 </div>
+
 
                 {/* Location */}
                 <div className="flex gap-5 items-center">

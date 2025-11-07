@@ -5,6 +5,12 @@ import { IoMdDownload } from "react-icons/io";
 import { MdFacebook } from "react-icons/md";
 
 export default function HeroText() {
+    const phoneNumber = "88010940386783"; // তোমার WhatsApp number (country code + number)
+    const message = "Hi Jihad, I want to contact you regarding web development.";
+
+    // URL encode message for WhatsApp
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
     const texts = ["Web Developer", "Front-End Developer"];
     const [textIndex, setTextIndex] = useState(0);
     const [display, setDisplay] = useState("");
@@ -76,14 +82,20 @@ export default function HeroText() {
 
             {/* Buttons */}
             <div className="flex gap-3.5 mt-15  md:mt-10">
-                <button className="flex gap-1.5 w-[130px] sm:w-fit items-center cursor-pointer uppercase px-6 py-3 border border-[#E8489C] border-gradient-r from-green-500 to-red-600 rounded-lg text-white font-semibold 
-                     hover:border-[#E8489C]
-                     transition-all duration-300 transform hover:scale-x-105 hover-gap-3 origin-left">
-                    <a href="">
+                <a
+                    href={whatsappLink}
+                    target="_blank"                     // নতুন tab-এ খুলবে
+                    rel="noopener noreferrer"
+                >
+                    <button className="flex gap-1.5 w-[130px] sm:w-fit items-center cursor-pointer uppercase px-6 py-3 border border-[#E8489C] rounded-lg text-white font-semibold 
+                         hover:border-[#E8489C]
+                         transition-all duration-300 transform hover:scale-105 origin-left">
                         Contact me
-                    </a>
-                    <BsFillPersonLinesFill />
-                </button>
+                        <BsFillPersonLinesFill />
+                    </button>
+                </a>
+
+
 
                 <button className="flex gap-1.5 w-[130px] sm:w-fit items-center cursor-pointer uppercase px-6 py-3  rounded-lg text-white font-semibold bg-gradient-to-r from-[#863BE6] to-[#E8489C]
                      hover:from-[#E8489C] hover:to-[#863BE6] hover-gap-3 

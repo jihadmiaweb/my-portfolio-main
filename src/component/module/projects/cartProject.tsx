@@ -28,7 +28,7 @@ const PROJECTS_DATA: Project[] = [
             "A full-featured school website showcasing courses, announcements, and an easy contact form. Developed with HTML, CSS, and JavaScript for a clear UI.",
         img: "/images/2.png",
         link: "https://online-mdrasha-web-site.vercel.app/",
-        tech: ["HTML", "React", "CSS", "Tailwind", "JavaScript"],
+        tech: ["HTML", "React", "CSS", "Tailwind", "TypeScript"],
     },
     {
         id: 3,
