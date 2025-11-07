@@ -6,6 +6,7 @@ import { Mainheader } from "./component/module/header/mainHeader"
 
 import MainHero from "./component/module/hero/mainHero"
 import MainProject from "./component/module/projects/mainProject"
+import Service from "./component/module/services/Service"
 import MainSkills from "./component/module/skills/mainSkills"
 
 
@@ -20,6 +21,7 @@ function App() {
         <MainAbout />
       </div>
       <MainExperience />
+      <Service />
       <MainSkills />
       <MainProject />
       <MainContact />
