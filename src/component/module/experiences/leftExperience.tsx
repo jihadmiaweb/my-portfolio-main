@@ -10,7 +10,7 @@ function LeftExperience() {
             transition={{ duration: 1, ease: "easeOut" }}
         >
             <motion.img
-                src="/images/leptop.png"
+                src="https://i.postimg.cc/6qBVsnfj/Pngtree-a-laptop-settings-isometric-vector-14871445-szfchr.png"
                 alt="leptop"
                 className="w-full max-w-[200px] sm:max-w-[220px] md:max-w-[250px] rounded-2xl shadow-2xl hover:shadow-glow transition-shadow duration-300"
                 animate={{ y: [0, -10, 0] }} // subtle vertical bounce

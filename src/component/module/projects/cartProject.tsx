@@ -18,7 +18,7 @@ const PROJECTS_DATA: Project[] = [
         description:
             "A clean, responsive landing page designed for fast loading and smooth user experience. Built with Tailwind CSS to look perfect on mobile, tablet, and desktop devices.",
         img: "/images/lending.png",
-        link: "https://my-portfolio-main-6c7cone4p-jihad-mias-projects-d29a1189.vercel.app/",
+        link: "https://my-portfolio-main-ssln.vercel.app/",
         tech: ["HTML", "React", "CSS", "Tailwind", "JavaScript"],
     },
     {
