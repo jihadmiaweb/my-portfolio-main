@@ -1,17 +1,18 @@
-import { motion, type Variants, } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
+import { FaServer, FaCode, FaDatabase, FaPlug } from "react-icons/fa"; // ✅ imported icons
 
 const HeroPrimaryColor = "#854FEE";
 const HeroAccentColor = "#FF4D6D";
 const HeroMidColor = "#4A90E2";
 
 const ServiceData = [
-  { id: 1, image: "/images/services/s1.png", name: "Backend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
-  { id: 2, image: "/images/services/s2.png", name: "Frontend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
-  { id: 3, image: "/images/services/s3.png", name: "Backend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
-  { id: 4, image: "/images/services/s4.png", name: "API Integration", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  { id: 1, icon: <FaServer />, name: "Backend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  { id: 2, icon: <FaCode />, name: "Frontend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  { id: 3, icon: <FaDatabase />, name: "Database Design", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  { id: 4, icon: <FaPlug />, name: "API Integration", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
 ];
 
-// TypeScript safe Variants
+// TypeScript-safe Variants
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
@@ -60,7 +61,7 @@ const Service = () => {
         {/* Service Cards */}
         <motion.div
           variants={containerVariants}
-          initial=""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
@@ -69,7 +70,6 @@ const Service = () => {
             <motion.div
               key={service.id}
               variants={itemVariants}
-              initial=""
               whileHover="hovered"
               className="group relative p-8 rounded-xl border border-gray-800 bg-[#0D1224] text-center overflow-hidden"
             >
@@ -94,20 +94,15 @@ const Service = () => {
               <div className="relative z-10">
                 {/* Animated Gradient Icon */}
                 <motion.div
-                  className="mx-auto h-16 w-16 p-3 rounded-full flex items-center justify-center mb-6 shadow-lg
-                             bg-clip-text text-transparent bg-gradient-to-r 
-                             from-[#854FEE] via-[#4A90E2] to-[#FF4D6D] 
-                             bg-[length:200%_200%] animate-gradient-x"
+                  className="mx-auto h-16 w-16 rounded-full flex items-center justify-center mb-6 shadow-lg
+                             bg-gradient-to-r from-[#854FEE] via-[#4A90E2] to-[#FF4D6D] 
+                             bg-[length:200%_200%] animate-gradient-x text-white text-3xl"
                   variants={{
-                    hovered: { scale: 1.1, transition: { type: "spring", stiffness: 150, damping: 20 } },
+                    hovered: { scale: 1.15, transition: { type: 'spring', stiffness: 150, damping: 20 } },
                     hidden: { scale: 1 },
                   }}
                 >
-                  <img
-                    src={service.image}
-                    alt={service.name}
-                    className="h-10 w-10 object-contain filter brightness-125"
-                  />
+                  {service.icon}
                 </motion.div>
 
                 <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
