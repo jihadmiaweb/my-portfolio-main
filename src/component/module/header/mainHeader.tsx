@@ -80,8 +80,8 @@ export const Mainheader: React.FC = () => {
                 {/* Nav Menu */}
                 <nav
                     className={`absolute md:static top-16 right-0 w-64 md:w-auto bg-[#0D1224] md:bg-transparent transition-all duration-300 ease-in-out shadow-xl md:shadow-none p-4 md:p-0 rounded-b-lg ${menuOpen
-                            ? "opacity-100 translate-x-0"
-                            : "opacity-0 translate-x-full md:opacity-100 md:translate-x-0 pointer-events-none md:pointer-events-auto"
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 translate-x-full md:opacity-100 md:translate-x-0 pointer-events-none md:pointer-events-auto"
                         } md:transform-none z-50`}
                 >
                     <ul className="flex cursor-pointer flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
@@ -100,7 +100,7 @@ export const Mainheader: React.FC = () => {
 
                         <li>
                             <a
-                                href="#contact"
+                                href="https://drive.google.com/file/d/1L_rZeQxlryPTvvfBWCTgoaPjpbjTxc2-/view"
                                 onClick={handleNavLinkClick}
                                 className="inline-block px-5 py-2 mt-4 md:mt-0 text-white font-bold text-sm rounded-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 transition-all duration-300 shadow-xl hover:shadow-pink-500/50 transform hover:scale-105"
                             >
