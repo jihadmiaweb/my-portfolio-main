@@ -100,7 +100,7 @@ export default function HeroText() {
                 <button className="flex gap-1.5 w-[130px] sm:w-fit items-center cursor-pointer uppercase px-6 py-3  rounded-lg text-white font-semibold bg-gradient-to-r from-[#863BE6] to-[#E8489C]
                      hover:from-[#E8489C] hover:to-[#863BE6] hover-gap-3 
                      transition-all duration-300 transform hover:scale-x-105 origin-left">
-                    <a href="https://drive.google.com/file/d/1L_rZeQxlryPTvvfBWCTgoaPjpbjTxc2-/view">
+                    <a href="https://drive.google.com/file/d/1si05AqtKEpk1wYNshPIgAuASA2zK4dUk/view?usp=drive_link">
                         RESUME
                     </a>
 
