@@ -4,7 +4,7 @@ function RightExperience() {
     const experiences = [
         {
             period: "Jun 2025 - Present",
-            title: "Front-End Developer & Student",
+            title: "Front-End Developer",
             institute: "Ahmad's IT Institute",
         },
         {
