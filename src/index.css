@@ -3,3 +3,7 @@
 html {
     scroll-behavior: smooth;
 }
+
+.my-container {
+    @apply max-w-6xl px-4 mx-auto;
+}

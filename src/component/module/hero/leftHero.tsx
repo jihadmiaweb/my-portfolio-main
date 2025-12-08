@@ -46,7 +46,7 @@ export default function HeroText() {
 
     return (
         <section className=" bg-[#0D1224] pt-0 sm:pt-9">
-            <div className="text-[30px] leading-[46px] sm:text-[40px] sm:leading-[56px] font-bold text-white">
+            <div className="text-[30px]  leading-[46px] sm:text-[40px] sm:leading-[56px] font-bold text-white">
                 <h1 className="">
                     Hello,
                 </h1>

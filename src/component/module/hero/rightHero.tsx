@@ -11,7 +11,7 @@ export default function RightHero({
     ],
 }) {
     return (
-        <div className="w-[250px]  sm:w-fit md:w-full mx-auto pt-7 ">
+        <div className="w-[250px] bg-[#0D1224]   sm:w-fit md:w-full mx-auto pt-7 ">
             {/* Window shell */}
             <div className="rounded-xl overflow-hidden border border-gray-400 bg-gradient-to-b from-[#0b1220] to-[#071026] shadow-[0_8px_30px_rgba(13,18,30,0.6)]">
                 {/* Top bar with three dots */}

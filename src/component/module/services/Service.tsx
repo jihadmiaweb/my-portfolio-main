@@ -27,7 +27,7 @@ const itemVariants: Variants = {
 const Service = () => {
   return (
     <section id="services" className="bg-[#0D1224] py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="max-w-6xl my-container mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto">
           <motion.h2
