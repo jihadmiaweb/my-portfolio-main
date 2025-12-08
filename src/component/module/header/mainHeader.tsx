@@ -35,7 +35,7 @@ export const Mainheader: React.FC = () => {
     const handleNavLinkClick = () => setMenuOpen(false);
 
     return (
-        <header className=" fixed  top-0 left-0 w-full z-50  ">
+        <header className=" fixed border-b border-[#1E293B] top-0 left-0 w-full z-50  ">
             {/* Overlay */}
             {menuOpen && (
                 <div
@@ -44,7 +44,7 @@ export const Mainheader: React.FC = () => {
                 ></div>
             )}
 
-            <div className="max-w-7xl my-container  shadow-lg border-b border-[#1E293B] bg-[#0D1224] mx-auto px-4 sm:px-6 md:px-8 h-16 flex items-center justify-between relative z-50">
+            <div className="max-w-7xl my-container  shadow-lg  bg-[#0D1224] mx-auto px-4 sm:px-6 md:px-8 h-16 flex items-center justify-between relative z-50">
                 {/* Logo */}
                 <a
                     href="#home"
