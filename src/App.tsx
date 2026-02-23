@@ -15,7 +15,7 @@ function App() {
   return (
     <>
 
-      <div className=" ">
+      <div className="DE ">
         <Mainheader />
         <MainHero />
         <MainAbout />
