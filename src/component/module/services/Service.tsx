@@ -6,7 +6,12 @@ const HeroAccentColor = "#FF4D6D";
 const HeroMidColor = "#4A90E2";
 
 const ServiceData = [
-  { id: 1, icon: <FaServer />, name: "Backend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
+  {
+    id: 1,
+    icon: <FaServer />,
+    name: "WordPress",
+    details: "Professional WordPress website development and customization."
+  },
   { id: 2, icon: <FaCode />, name: "Frontend Development", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
   { id: 3, icon: <FaDatabase />, name: "Database Design", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
   { id: 4, icon: <FaPlug />, name: "API Integration", details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree" },
